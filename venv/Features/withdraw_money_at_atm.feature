@@ -3,7 +3,7 @@ Feature: Transact money at ATM
   As a Bank Owner, I want to increase my Clients interactions
   with their accounts by introducing ATMs
 
-  Rule: Withdraw money
+  Rule: Withdraw money and Deposit money
 
     Background: Setting Account transaction conditions
       Given that account has UGX "100000"
@@ -19,6 +19,3 @@ Feature: Transact money at ATM
     Scenario: Failed withdrawal
       When I fail withdraw UGX 80000
       Then failed Account balance is 100000
-
-
-
