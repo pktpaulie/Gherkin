@@ -18,8 +18,8 @@ Feature: Transact money at ATM
     
     @Deposit @Failure
     Scenario: Failed deposit
-      When I deposit UGX 40000
-      And Account state is "locked"
-      Then Feedback reads "Unable to transact!"
+      When I fail deposit UGX 40000
+      And failedAccount state is "locked"
+      Then failFeedback reads "Unable to transact!"
 
 

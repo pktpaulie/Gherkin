@@ -40,3 +40,22 @@ def feedback(context):
     assert context.successful_deposit is True
 
 
+#Failed Deopsit
+@when('I fail deposit UGX {deposit_amount}')
+def unsuccessful_deposit(context, deposit_amount):
+    context.deposit_amount = int(deposit_amount)
+    remaining_balance = context.initial_balance
+    assert remaining_balance == context.initial_balance 
+
+
+#unsuccessful deposit
+@when('failedAccount state is "{status}"')
+def account_state(context, status):
+    if status == "unlocked":
+        context.unsuccessful_deposit = False
+    elif status == "locked":
+        context.unsuccessful_deposit = True
+
+@then('failFeedback reads "Unable to transact!"')
+def failfeedback(context):
+    assert context.unsuccessful_deposit is True
