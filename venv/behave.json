@@ -1,0 +1,9 @@
+{
+    "default": {
+        "parallel":2,
+        "paths": ["Features/deposit_money_at_atm.feature"],
+        "require": ["Features/steps/deposit_money_at_atm.py"],
+        "format": ["html:cucumber-report.html"],
+        "publish": true
+    }
+}
