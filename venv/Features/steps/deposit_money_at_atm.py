@@ -1,5 +1,5 @@
 from behave import *
-
+import allure
 # Background
 @given('that the account has UGX "{initial_balance}"')
 def account_has_funds(context, initial_balance):
