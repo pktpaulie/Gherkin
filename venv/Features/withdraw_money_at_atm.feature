@@ -10,12 +10,12 @@ Feature: Transact money at ATM
       And transaction fees of UGX "5000"
       But maintaining minimum balance of UGX "20000"
 
-    @Withdraw @Success
+    @successfulWithdrawal
     Scenario: Successful withdrawal
       When I withdraw UGX 50000
       Then Account balance is 45000
 
-    @Withdraw @Failure
+    @failedwithdrawal
     Scenario: Failed withdrawal
       When I fail withdraw UGX 80000
       Then failed Account balance is 100000

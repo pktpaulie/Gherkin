@@ -10,16 +10,17 @@ Feature: Transact money at ATM
       And transaction fee of UGX "2500"
       But Account is "unlocked"
 
-    @Deposit  @Success
+    @Successfuldeposit
     Scenario: Successful deposit
       When I deposit UGX 50000 
       And Account state is "unlocked"
       Then Feedback reads "Successful"
     
-    @Deposit @Failure
+    @Faileddeposit
     Scenario: Failed deposit
       When I fail deposit UGX 40000
       And failedAccount state is "locked"
       Then failFeedback reads "Unable to transact!"
+
 
 
