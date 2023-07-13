@@ -22,4 +22,4 @@ def withdraw_amount(context, withdraw_amount):
 
 @then('Account balance becomes UGX "{new_balance}"')
 def verify_new_balance(context, new_balance):
-    assert context.new_balance == int(new_balance)
+    assert context.new_balance == int(context.new_balance)

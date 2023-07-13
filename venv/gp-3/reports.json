@@ -1,0 +1,925 @@
+[
+{
+  "description": [
+    "As a Bank Owner, I want to increase my Clients interactions",
+    "with their accounts by introducing ATMs",
+    "Rule: Deposit money"
+  ],
+  "elements": [
+    {
+      "keyword": "Background",
+      "location": "deposit_money_at_atm.feature:8",
+      "name": "Set Account Deposit conditions",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "deposit_money_at_atm.feature:9",
+          "name": "that the account has UGX \"50000\"",
+          "step_type": "given"
+        },
+        {
+          "keyword": "And",
+          "location": "deposit_money_at_atm.feature:10",
+          "name": "transaction fee of UGX \"2500\"",
+          "step_type": "given"
+        },
+        {
+          "keyword": "But",
+          "location": "deposit_money_at_atm.feature:11",
+          "name": "Account is \"unlocked\"",
+          "step_type": "given"
+        }
+      ],
+      "type": "background"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "deposit_money_at_atm.feature:14",
+      "name": "Successful deposit",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "deposit_money_at_atm.feature:9",
+          "match": {
+            "arguments": [
+              {
+                "name": "initial_balance",
+                "value": "50000"
+              }
+            ],
+            "location": "steps/deposit_money_at_atm.py:4"
+          },
+          "name": "that the account has UGX \"50000\"",
+          "result": {
+            "duration": 0.001996755599975586,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "And",
+          "location": "deposit_money_at_atm.feature:10",
+          "match": {
+            "arguments": [
+              {
+                "name": "transaction_fees",
+                "value": "2500"
+              }
+            ],
+            "location": "steps/deposit_money_at_atm.py:9"
+          },
+          "name": "transaction fee of UGX \"2500\"",
+          "result": {
+            "duration": 0.0010046958923339844,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "But",
+          "location": "deposit_money_at_atm.feature:11",
+          "match": {
+            "arguments": [
+              {
+                "name": "status",
+                "value": "unlocked"
+              }
+            ],
+            "location": "steps/deposit_money_at_atm.py:14"
+          },
+          "name": "Account is \"unlocked\"",
+          "result": {
+            "duration": 0.0019960403442382812,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "deposit_money_at_atm.feature:15",
+          "match": {
+            "arguments": [
+              {
+                "name": "deposit_amount",
+                "value": "50000"
+              }
+            ],
+            "location": "steps/deposit_money_at_atm.py:19"
+          },
+          "name": "I deposit UGX 50000",
+          "result": {
+            "duration": 0.0010001659393310547,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "deposit_money_at_atm.feature:16",
+          "match": {
+            "arguments": [
+              {
+                "name": "status",
+                "value": "unlocked"
+              }
+            ],
+            "location": "steps/deposit_money_at_atm.py:30"
+          },
+          "name": "Account state is \"unlocked\"",
+          "result": {
+            "duration": 0.0010001659393310547,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "deposit_money_at_atm.feature:17",
+          "match": {
+            "arguments": [],
+            "location": "steps/deposit_money_at_atm.py:38"
+          },
+          "name": "Feedback reads \"Successful\"",
+          "result": {
+            "duration": 0.0009989738464355469,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "Deposit",
+        "Success"
+      ],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "deposit_money_at_atm.feature:20",
+      "name": "Failed deposit",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "deposit_money_at_atm.feature:9",
+          "match": {
+            "arguments": [
+              {
+                "name": "initial_balance",
+                "value": "50000"
+              }
+            ],
+            "location": "steps/deposit_money_at_atm.py:4"
+          },
+          "name": "that the account has UGX \"50000\"",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "And",
+          "location": "deposit_money_at_atm.feature:10",
+          "match": {
+            "arguments": [
+              {
+                "name": "transaction_fees",
+                "value": "2500"
+              }
+            ],
+            "location": "steps/deposit_money_at_atm.py:9"
+          },
+          "name": "transaction fee of UGX \"2500\"",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "But",
+          "location": "deposit_money_at_atm.feature:11",
+          "match": {
+            "arguments": [
+              {
+                "name": "status",
+                "value": "unlocked"
+              }
+            ],
+            "location": "steps/deposit_money_at_atm.py:14"
+          },
+          "name": "Account is \"unlocked\"",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "deposit_money_at_atm.feature:21",
+          "match": {
+            "arguments": [
+              {
+                "name": "deposit_amount",
+                "value": "40000"
+              }
+            ],
+            "location": "steps/deposit_money_at_atm.py:44"
+          },
+          "name": "I fail deposit UGX 40000",
+          "result": {
+            "duration": 0.001001596450805664,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "deposit_money_at_atm.feature:22",
+          "match": {
+            "arguments": [
+              {
+                "name": "status",
+                "value": "locked"
+              }
+            ],
+            "location": "steps/deposit_money_at_atm.py:52"
+          },
+          "name": "failedAccount state is \"locked\"",
+          "result": {
+            "duration": 0.0009980201721191406,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "deposit_money_at_atm.feature:23",
+          "match": {
+            "arguments": [],
+            "location": "steps/deposit_money_at_atm.py:59"
+          },
+          "name": "failFeedback reads \"Unable to transact!\"",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "Deposit",
+        "Failure"
+      ],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "deposit_money_at_atm.feature:1",
+  "name": "Transact money at ATM",
+  "status": "passed",
+  "tags": []
+},
+
+{
+  "description": [
+    "As a Bank Owner, I want to increase my Clients interactions",
+    "with their accounts by introducing ATMs",
+    "Rule: Withdraw money and Deposit money"
+  ],
+  "elements": [
+    {
+      "keyword": "Background",
+      "location": "withdraw_money_at_atm.feature:8",
+      "name": "Setting Account transaction conditions",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "withdraw_money_at_atm.feature:9",
+          "name": "that account has UGX \"100000\"",
+          "step_type": "given"
+        },
+        {
+          "keyword": "And",
+          "location": "withdraw_money_at_atm.feature:10",
+          "name": "transaction fees of UGX \"5000\"",
+          "step_type": "given"
+        },
+        {
+          "keyword": "But",
+          "location": "withdraw_money_at_atm.feature:11",
+          "name": "maintaining minimum balance of UGX \"20000\"",
+          "step_type": "given"
+        }
+      ],
+      "type": "background"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "withdraw_money_at_atm.feature:14",
+      "name": "Successful withdrawal",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "withdraw_money_at_atm.feature:9",
+          "match": {
+            "arguments": [
+              {
+                "name": "initial_balance",
+                "value": "100000"
+              }
+            ],
+            "location": "steps/withdraw_money_at_atm.py:5"
+          },
+          "name": "that account has UGX \"100000\"",
+          "result": {
+            "duration": 0.0009989738464355469,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "And",
+          "location": "withdraw_money_at_atm.feature:10",
+          "match": {
+            "arguments": [
+              {
+                "name": "transaction_fees",
+                "value": "5000"
+              }
+            ],
+            "location": "steps/withdraw_money_at_atm.py:10"
+          },
+          "name": "transaction fees of UGX \"5000\"",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "But",
+          "location": "withdraw_money_at_atm.feature:11",
+          "match": {
+            "arguments": [
+              {
+                "name": "min_balance",
+                "value": "20000"
+              }
+            ],
+            "location": "steps/withdraw_money_at_atm.py:15"
+          },
+          "name": "maintaining minimum balance of UGX \"20000\"",
+          "result": {
+            "duration": 0.001001596450805664,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "withdraw_money_at_atm.feature:15",
+          "match": {
+            "arguments": [
+              {
+                "name": "amount",
+                "value": "50000"
+              }
+            ],
+            "location": "steps/withdraw_money_at_atm.py:20"
+          },
+          "name": "I withdraw UGX 50000",
+          "result": {
+            "duration": 0.0010039806365966797,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "withdraw_money_at_atm.feature:16",
+          "match": {
+            "arguments": [
+              {
+                "name": "balance",
+                "value": "45000"
+              }
+            ],
+            "location": "steps/withdraw_money_at_atm.py:31"
+          },
+          "name": "Account balance is 45000",
+          "result": {
+            "duration": 0.0009951591491699219,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "Withdraw",
+        "Success"
+      ],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "withdraw_money_at_atm.feature:19",
+      "name": "Failed withdrawal",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "withdraw_money_at_atm.feature:9",
+          "match": {
+            "arguments": [
+              {
+                "name": "initial_balance",
+                "value": "100000"
+              }
+            ],
+            "location": "steps/withdraw_money_at_atm.py:5"
+          },
+          "name": "that account has UGX \"100000\"",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "And",
+          "location": "withdraw_money_at_atm.feature:10",
+          "match": {
+            "arguments": [
+              {
+                "name": "transaction_fees",
+                "value": "5000"
+              }
+            ],
+            "location": "steps/withdraw_money_at_atm.py:10"
+          },
+          "name": "transaction fees of UGX \"5000\"",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "But",
+          "location": "withdraw_money_at_atm.feature:11",
+          "match": {
+            "arguments": [
+              {
+                "name": "min_balance",
+                "value": "20000"
+              }
+            ],
+            "location": "steps/withdraw_money_at_atm.py:15"
+          },
+          "name": "maintaining minimum balance of UGX \"20000\"",
+          "result": {
+            "duration": 0.0020017623901367188,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "withdraw_money_at_atm.feature:20",
+          "match": {
+            "arguments": [
+              {
+                "name": "withdraw_amount",
+                "value": "80000"
+              }
+            ],
+            "location": "steps/withdraw_money_at_atm.py:38"
+          },
+          "name": "I fail withdraw UGX 80000",
+          "result": {
+            "duration": 0.002001523971557617,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "withdraw_money_at_atm.feature:21",
+          "match": {
+            "arguments": [
+              {
+                "name": "initial_balance",
+                "value": "100000"
+              }
+            ],
+            "location": "steps/withdraw_money_at_atm.py:46"
+          },
+          "name": "failed Account balance is 100000",
+          "result": {
+            "duration": 0.0010001659393310547,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "Withdraw",
+        "Failure"
+      ],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "withdraw_money_at_atm.feature:1",
+  "name": "Transact money at ATM",
+  "status": "passed",
+  "tags": []
+},
+
+{
+  "description": [
+    "As a Bank Manager, I want to ensure that the integrity of the Account",
+    "balances remains intact though I charge for every transaction, whether",
+    "successfull or not until down to minimum account balance."
+  ],
+  "elements": [
+    {
+      "keyword": "Background",
+      "location": "withdraw_transactions_feature.feature:7",
+      "name": "Setting Account transaction conditions",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "withdraw_transactions_feature.feature:8",
+          "name": "that account balance is UGX 100000",
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "withdraw_transactions_feature.feature:9",
+          "name": "withdrawal fees of UGX 5000",
+          "step_type": "given"
+        },
+        {
+          "keyword": "And",
+          "location": "withdraw_transactions_feature.feature:10",
+          "name": "maintaining a minimum balance of UGX 20000",
+          "step_type": "given"
+        }
+      ],
+      "type": "background"
+    },
+    {
+      "keyword": "Scenario Outline",
+      "location": "withdraw_transactions_feature.feature:19",
+      "name": "Ensuring integrity of withdrawals -- @1.1 ",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "withdraw_transactions_feature.feature:8",
+          "match": {
+            "arguments": [
+              {
+                "name": "initial_balance",
+                "value": "100000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:3"
+          },
+          "name": "that account balance is UGX 100000",
+          "result": {
+            "duration": 0.0009989738464355469,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "withdraw_transactions_feature.feature:9",
+          "match": {
+            "arguments": [
+              {
+                "name": "withdrawal_fees",
+                "value": "5000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:7"
+          },
+          "name": "withdrawal fees of UGX 5000",
+          "result": {
+            "duration": 0.0010018348693847656,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "And",
+          "location": "withdraw_transactions_feature.feature:10",
+          "match": {
+            "arguments": [
+              {
+                "name": "minimum_balance",
+                "value": "20000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:11"
+          },
+          "name": "maintaining a minimum balance of UGX 20000",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "withdraw_transactions_feature.feature:14",
+          "match": {
+            "arguments": [
+              {
+                "name": "withdraw_amount",
+                "value": "55000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:16"
+          },
+          "name": "I withdraw amount UGX \"55000\"",
+          "result": {
+            "duration": 0.002002716064453125,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "withdraw_transactions_feature.feature:15",
+          "match": {
+            "arguments": [
+              {
+                "name": "new_balance",
+                "value": "40000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:23"
+          },
+          "name": "Account balance becomes UGX \"40000\"",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "WithdrawalsIntegrityCheck"
+      ],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario Outline",
+      "location": "withdraw_transactions_feature.feature:20",
+      "name": "Ensuring integrity of withdrawals -- @1.2 ",
+      "status": "failed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "withdraw_transactions_feature.feature:8",
+          "match": {
+            "arguments": [
+              {
+                "name": "initial_balance",
+                "value": "100000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:3"
+          },
+          "name": "that account balance is UGX 100000",
+          "result": {
+            "duration": 0.0009992122650146484,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "withdraw_transactions_feature.feature:9",
+          "match": {
+            "arguments": [
+              {
+                "name": "withdrawal_fees",
+                "value": "5000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:7"
+          },
+          "name": "withdrawal fees of UGX 5000",
+          "result": {
+            "duration": 0.0009970664978027344,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "And",
+          "location": "withdraw_transactions_feature.feature:10",
+          "match": {
+            "arguments": [
+              {
+                "name": "minimum_balance",
+                "value": "20000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:11"
+          },
+          "name": "maintaining a minimum balance of UGX 20000",
+          "result": {
+            "duration": 0.001001119613647461,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "withdraw_transactions_feature.feature:14",
+          "match": {
+            "arguments": [
+              {
+                "name": "withdraw_amount",
+                "value": "110000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:16"
+          },
+          "name": "I withdraw amount UGX \"110000\"",
+          "result": {
+            "duration": 0.004001140594482422,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "withdraw_transactions_feature.feature:15",
+          "match": {
+            "arguments": [
+              {
+                "name": "new_balance",
+                "value": "95000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:23"
+          },
+          "name": "Account balance becomes UGX \"95000\"",
+          "result": {
+            "duration": 0.004996299743652344,
+            "error_message": [
+              "Traceback (most recent call last):",
+              "  File \"C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\behave\\model.py\", line 1329, in run",
+              "    match.run(runner.context)",
+              "  File \"C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\behave\\matchers.py\", line 98, in run",
+              "    self.func(context, *args, **kwargs)",
+              "  File \"steps\\withdrawal_transactions.py\", line 25, in verify_new_balance",
+              "    assert context.new_balance == int(new_balance)",
+              "AssertionError"
+            ],
+            "status": "failed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "WithdrawalsIntegrityCheck"
+      ],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario Outline",
+      "location": "withdraw_transactions_feature.feature:21",
+      "name": "Ensuring integrity of withdrawals -- @1.3 ",
+      "status": "failed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "withdraw_transactions_feature.feature:8",
+          "match": {
+            "arguments": [
+              {
+                "name": "initial_balance",
+                "value": "100000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:3"
+          },
+          "name": "that account balance is UGX 100000",
+          "result": {
+            "duration": 0.00099945068359375,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "withdraw_transactions_feature.feature:9",
+          "match": {
+            "arguments": [
+              {
+                "name": "withdrawal_fees",
+                "value": "5000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:7"
+          },
+          "name": "withdrawal fees of UGX 5000",
+          "result": {
+            "duration": 0.0010020732879638672,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "And",
+          "location": "withdraw_transactions_feature.feature:10",
+          "match": {
+            "arguments": [
+              {
+                "name": "minimum_balance",
+                "value": "20000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:11"
+          },
+          "name": "maintaining a minimum balance of UGX 20000",
+          "result": {
+            "duration": 0.0009982585906982422,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "withdraw_transactions_feature.feature:14",
+          "match": {
+            "arguments": [
+              {
+                "name": "withdraw_amount",
+                "value": "80000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:16"
+          },
+          "name": "I withdraw amount UGX \"80000\"",
+          "result": {
+            "duration": 0.0010023117065429688,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "withdraw_transactions_feature.feature:15",
+          "match": {
+            "arguments": [
+              {
+                "name": "new_balance",
+                "value": "95000"
+              }
+            ],
+            "location": "steps/withdrawal_transactions.py:23"
+          },
+          "name": "Account balance becomes UGX \"95000\"",
+          "result": {
+            "duration": 0.002003192901611328,
+            "error_message": [
+              "Traceback (most recent call last):",
+              "  File \"C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\behave\\model.py\", line 1329, in run",
+              "    match.run(runner.context)",
+              "  File \"C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\behave\\matchers.py\", line 98, in run",
+              "    self.func(context, *args, **kwargs)",
+              "  File \"steps\\withdrawal_transactions.py\", line 25, in verify_new_balance",
+              "    assert context.new_balance == int(new_balance)",
+              "AssertionError"
+            ],
+            "status": "failed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "WithdrawalsIntegrityCheck"
+      ],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "withdraw_transactions_feature.feature:1",
+  "name": "Withdraw Transactions at the ATM",
+  "status": "failed",
+  "tags": []
+}
+]
